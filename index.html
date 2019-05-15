@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+try{
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        window.location.href="mindex.html";
+    }
+}catch(e){}
+</script>
+<title>2018“柏鹭杯”大学生网络空间安全精英赛</title>
+</head>
+
+<style type="text/css">
+	body {
+		margin: 0; 
+		padding: 0;
+	}
+	div.floatCtro {
+		width: 60px; 
+		height: 20%; 
+		position: fixed; 
+		right: 20px; 
+		top: 30%; 
+		z-index: 100}
+	div.floatCtro p {
+		width: 60px; 
+		text-align: center; 
+		height: 40px;
+		line-height: 40px;
+		font-family: '微软雅黑';
+		font-size: 12px;
+		color: #FFF;
+		margin: 0; 
+		padding: 0; 
+		cursor: pointer; 
+		background: #191919;
+	}
+	div.floatCtro a {
+		display: inline-block; 
+		display: none; 
+		width: 60px; 
+		height: 60px; 
+		margin: 10px 0 0 0;
+		background: #191919; 
+		color: #fff;  
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	div.floatCtro a span {
+		display: block; 
+		width: 28px; 
+	    height: 44px; 
+	    line-height: 22px;
+	    font-family: '微软雅黑'; 
+	    font-size: 12px;
+	    text-align: center;
+	    margin: 8px 16px;
+	    _margin: -10px 0 0 16px;
+	}
+	div.floatCtro a:hover { 
+		background: #1792ff; 
+	    color: #fff; 
+	    zoom: 1;
+	}
+	div.floatCtro p:hover { 
+	    background: #1792ff; 
+		color: #fff;
+	}
+	div.floatCtro p.cur {
+	    background: #1792ff; 
+		color: #fff;	
+	}
+	
+	.title {
+		position: relative;
+	    width: 100%;
+	}
+	.banner {
+		width: 100%;
+		z-index: 5;
+	}
+	.introduce {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+		padding-top: 50px;
+		background-color: #f8f8f8;
+	    z-index: 5;
+	}
+	.introduce_image {
+	    width: 594px;
+		height: 369.6px;
+	    margin: 50px auto auto auto;
+	    background-image: url(images/xinxikuang.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.arrange {
+		width: 100%;
+		margin: auto;
+		text-align: center;
+		padding-top: 50px;
+		z-index: 5;
+		background-color: #191919;
+	}
+	.arrange_image {
+		background:url(images/time.gif); 
+		width: 800px; 
+		height: 400px; 
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto;
+	}
+	.explain {
+	    width: 100%;
+		margin: auto;
+	    padding-top: 50px;
+	    text-align: center;
+		background-color: #f8f8f8;
+	    z-index: 5;
+	}
+	.explain_image {
+		background:url(images/inform.png); 
+		width: 754px; 
+		height: 229.5px; 
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto;
+	}
+	.explain_baoming {
+		margin: 50px auto auto auto;
+		font-size: larger; 
+		font-weight: bolder;
+		color: #000; 
+		line-height: 30px; 
+		letter-spacing: 2px
+	}
+	.form {
+	    width: 100%;
+		margin: auto;
+	    padding-top: 50px;
+	    text-align: center;
+	    z-index: 5;
+		background-color: #191919;
+	}
+	.form_image {
+		background:url(images/xingshi.png); 
+		width: 653.1px;
+		height: 478.1px;
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto;
+	}
+	.prize {
+	   	width: 100%;
+		margin: auto;
+	    padding-top: 50px;
+	    text-align: center;
+		background-color: #f8f8f8;
+	    z-index: 5;
+	}
+	.prize_image {
+		background:url(images/medal.png); 
+		width: 694.1px;
+		height: 782.65px;
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto;
+	}
+	.organize {
+	    width: 100%;
+		padding-top: 50px;
+	    margin: auto;
+	    text-align: center;
+	    z-index: 5;
+		background-color: #191919;
+	}
+	.organize_image {
+		background:url(images/zuzhi.png); 
+		width: 766.7px;
+		height: 741.4px;
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto;
+	}
+	.contact {
+	    width: 100%;
+		padding-top: 50px;
+		margin: auto;
+	    text-align: center;
+	    z-index: 5;
+		background-color: #191f27;
+	}
+	.contact_image {
+		background:url(images/lianxi.png); 
+		width: 597px;
+		height: 102px;
+		background-size: contain; 
+		background-repeat: no-repeat; 
+		margin: 50px auto auto auto; 
+	}
+	.language {
+		z-index: 10;
+		position: absolute;
+		top: 75px;
+		right: 75px;
+	}
+	
+	#Chinese {
+	    display:inline;
+	    font-family: '微软雅黑';
+	    color: #1792ff;
+	    font-size: 20px;
+	}
+	
+	#gang {
+		display:inline;
+	    font-family: '微软雅黑';
+	    color: #FFF;
+		font-size: 20px;
+	}
+	
+	#English {
+	    display: inline;
+	    text-decoration: none;
+	    font-family: '微软雅黑';
+	    color: #1792ff;
+	    font-size: 20px;
+	}
+	
+	#English a:hover {
+	    display: inline;
+        color: #1792ff;
+	    text-decoration: none;
+	    font-family: '微软雅黑';
+	    font-size: 20px;
+	}
+	#English a {
+	    display: inline;
+	    text-decoration: none;
+	    font-family: '微软雅黑';
+	    color: #FFF;
+	    font-size: 20px;
+	}
+	
+</style>
+	
+<script>
+   $(function(){
+	   var AllHet = $(window).height();
+	   var mainHet= $('.floatCtro').height();
+	   var fixedTop = (AllHet - mainHet)/2
+	 //  $('div.floatCtro').css({top:fixedTop+'px'}); 
+	   $('div.floatCtro p').click(function(){
+			var ind = $('div.floatCtro p').index(this)+1;
+			var topVal = $('#float0'+ind).offset().top;
+			$('body,html').animate({scrollTop:topVal},1000)
+		})
+		$('div.floatCtro a').click(function(){
+			$('body,html').animate({scrollTop:0},1000)
+			})
+	   $(window).scroll(scrolls)
+	   scrolls()
+	   function scrolls(){
+		   var f1,f2,f3,f4,f5,f6,f7,bck;
+		   var fixRight = $('div.floatCtro p');
+		   var blackTop = $('div.floatCtro a')
+		   var sTop = $(window).scrollTop();
+		   fl = $('#float01').offset().top;
+		   f2 = $('#float02').offset().top;
+		   f3 = $('#float03').offset().top;
+		   f4 = $('#float04').offset().top;
+		   f5 = $('#float05').offset().top;
+		   f6 = $('#float06').offset().top;
+		   f7 = $('#float07').offset().top;
+		   
+		   if(sTop<=f2-100){
+			   blackTop.fadeOut(300).css('display','none')
+			   }
+		   else{
+			   blackTop.fadeIn(300).css('display','block')
+			   }
+		   
+		   if(sTop>=fl){
+			   fixRight.eq(0).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f2-100){
+			   fixRight.eq(1).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f3-100){
+			   fixRight.eq(2).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f4-100){
+			   fixRight.eq(3).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f5-100){
+			   fixRight.eq(4).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f6-100){
+			   fixRight.eq(5).addClass('cur').siblings().removeClass('cur');
+			   }
+		   if(sTop>=f7-100){
+			   fixRight.eq(6).addClass('cur').siblings().removeClass('cur');
+			   } 
+		
+	     }
+	   })
+</script>
+	
+<body ondragstart="return false">
+	<div class="main">
+		
+	<div class="title">
+	<img class="banner" src="images/B1.jpg" alt=""/>
+	<span class="language">
+		<div id="Chinese">
+		    中文
+		</div>
+		<div id="gang">
+		    &nbsp;/&nbsp;
+		</div>
+	    <div id="English">
+			<a href="enindex.html">English</a>
+		</div>
+	</span>
+	</div>	
+		
+	<div id="float01">
+	<div class="introduce">
+	<img src="images/introduce.png" alt=""/>
+	<div class="introduce_image">
+	</div>
+    <br><br><br><br>
+	</div>
+	</div>
+		
+	<div id="float02">
+	<div class="arrange">
+	<img src="images/arrange.png" alt=""/>
+	<div class="arrange_image">
+	</div>
+	<br><br><br><br>
+	</div>
+	</div>
+	
+	<div id="float03">
+	<div class="explain">
+	<img src="images/explain.png" alt=""/>
+	<div class="explain_image">
+	</div>
+	<div class="explain_baoming">
+		报名方式：<br>将参赛回执发送至：bailucup@163.com<br><br>
+	<a href="【国内高校参赛回执-中文】2018“柏鹭杯”大学生网络空间安全精英赛参赛回执.docx"><img src="images/baoming.png" width="204.1px" height="39.65px" alt=""/></a><br><br>
+	<a href="2018柏鹭杯大学生网络空间安全精英赛.pdf"><img src="images/tongzhi.png" width="204.1px" height="39.65px" alt=""/></a>
+	</div>
+	<br><br><br><br>
+	</div>
+	</div>
+		
+	<div id="float04">
+	<div class="form">
+	<img src="images/form.png" alt=""/>
+	<div class="form_image">
+	</div>
+	<br><br><br><br>
+	</div>
+	</div>
+		
+	<div id="float05">
+	<div class="prize">
+	<img src="images/prize.png" alt=""/>
+	<div class="prize_image">
+	</div>
+	<br><br><br><br>
+	</div>
+	</div>
+	
+	<div id="float06">
+	<div class="organize">
+	<img src="images/organize.png" alt=""/>
+	<div class="organize_image">
+    </div>
+	<br><br><br><br>
+	</div>
+	</div>
+		
+	<div id="float07">
+	<div class="contact">
+		<img src="images/contact.png" alt=""/>
+		<table class="contact_image">
+        </table>
+		<br><br>
+	</div>
+	</div>
+		
+     <div class="floatCtro">
+          <p>赛事介绍</p>
+          <p>赛程安排</p>
+          <p>比赛说明</p>
+          <p>比赛形式</p>
+          <p>奖项设置</p>
+          <p>组织机构</p>
+          <p>联系方式</p>
+          <a>
+            <font style="width:60px; height:1px; display:block"></font>
+            <span>返回顶部</span>
+          </a>
+     </div>
+	</div>
+</body>
+</html>
