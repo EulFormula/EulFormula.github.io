@@ -1,1 +1,0 @@
-# EulFormula.github.io
